@@ -1,24 +1,35 @@
 package lesson8;
 
 import java.io.*;
-import java.io.File;
+import java.util.*;
 
 public class Main {
+
     public static void main(String[] args) throws IOException {
-        File file = new File("../../lesson8/input1.txt");
-        String[] s;
 
-        try {
-            BufferedReader br = new BufferedReader(new FileReader(file));
+        File file = new File("input1.text");
+        ArrayList ar = new ArrayList();
+        String [] arr = new String[11];
+        int i = 0;
 
-            while (br.ready()) {
-                s = br.readLine().split(" ");
-                System.out.println(" ");
+                try{
+                    Scanner scan = new Scanner(new FileReader(file));
 
-            }
+                    while (scan.hasNextLine()){
+                        String ss = scan.nextLine();
+                        i = i+1;
+                        arr[i] = ss;
+                    }
 
-        } catch (IOException e){
-            e.printStackTrace();
-        }
+                    System.out.println(ar);
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
     }
 }
+
+
+
+
